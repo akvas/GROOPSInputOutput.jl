@@ -24,4 +24,10 @@ docs/site/
 Manifest.toml
 
 # cmake
-build
+deps/CMakeFiles
+deps/lib
+deps/libgroopsio*
+deps/Makefile
+deps/install_manifest.txt
+deps/cmake_install.cmake
+deps/CMakeCache.txt

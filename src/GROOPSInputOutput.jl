@@ -1,6 +1,6 @@
 module GROOPSInputOutput
   using CxxWrap
-  @wrapmodule(joinpath("..", "deps", "build", "lib", "libgroopsio"))
+  @wrapmodule(joinpath(dirname(dirname(@__FILE__)), "deps", "lib", "libgroopsio"))
 
   function __init__()
     @initcxx
