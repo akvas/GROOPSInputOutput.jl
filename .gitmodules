@@ -1,0 +1,3 @@
+[submodule "deps/groopsio"]
+	path = deps/groopsio
+	url = https://github.com/groops-devs/groopsio.git
