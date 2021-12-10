@@ -1,5 +1,6 @@
 module GROOPSInputOutput
 
+  using Dates
   using PyCall
 
   const gio = PyNULL()
@@ -20,7 +21,35 @@ module GROOPSInputOutput
     gio.loadgrid(filename)
   end
 
+  function savegrid(filename, data, a, f)
+    gio.savegrid(filename, data, a, f)
+  end
+
+  function loadgridrectangular(filename)
+    gio.loadgridrectangular(filename)
+  end
+
   function loadpolygon(filename)
     gio.loadpolygon(filename)
+  end
+
+  function loadsphericalharmonics(filename)
+    gio.loadsphericalharmonics(filename)
+  end
+
+  function loadtimesplines(filename, t::Dates.DateTime)
+    gio.loadtimesplines(filename, t)
+  end
+
+  function loadnormals(filename)
+    gio.loadnormals(filename)
+  end
+
+  function loadnormalsinfo(filename, fullinfo::Bool=false)
+    gio.loadnormalsinfo(filename, fullinfo)
+  end
+
+  function loadtimeseries(filename)
+    gio.loadtimeseries(filename)
   end
 end
