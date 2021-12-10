@@ -21,7 +21,7 @@ module GROOPSInputOutput
     gio.loadgrid(filename)
   end
 
-  function savegrid(filename, data, a, f)
+  function savegrid(filename, data, a::Number, f::Number)
     gio.savegrid(filename, data, a, f)
   end
 
@@ -45,8 +45,8 @@ module GROOPSInputOutput
     gio.loadnormals(filename)
   end
 
-  function loadnormalsinfo(filename, fullinfo::Bool=false)
-    gio.loadnormalsinfo(filename, fullinfo)
+  function loadnormalsinfo(filename, return_full_info::Bool=false)
+    gio.loadnormalsinfo(filename, return_full_info=return_full_info)
   end
 
   function loadtimeseries(filename)
